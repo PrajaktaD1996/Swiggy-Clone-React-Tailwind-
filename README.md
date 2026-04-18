@@ -1,5 +1,5 @@
 # Swiggy-Clone-React-Tailwind | In Progress 🚧
-Responsive UI using React and Tailwind CSS 
+Responsive food delivery UI built with React + Tailwind, focusing on reusable components and modern layout system 
 
 A responsive food delivery web application inspired by Swiggy, built using React and Tailwind CSS.  
 This project focuses on building a real-world frontend system using component-based architecture.
