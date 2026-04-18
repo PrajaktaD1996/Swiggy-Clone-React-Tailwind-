@@ -1,0 +1,12 @@
+1.npm create vite@latest swiggy-clone
+2.Now carefully choose:
+    Framework: React
+    Variant: JavaScript
+3.cd swiggy-clone
+  npm install
+  npm run dev
+
+4.npm cache clean --force
+5.npm install -g npm
+6.npm install -D tailwindcss@3 postcss autoprefixer
+7.npx tailwindcss init -p
