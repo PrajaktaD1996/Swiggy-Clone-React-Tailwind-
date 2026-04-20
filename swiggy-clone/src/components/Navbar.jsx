@@ -1,13 +1,26 @@
 export default function Navbar() {
   return (
     <div style={{
-      padding: "15px",
-      backgroundColor: "#ff5200",
-      color: "white",
-      fontSize: "20px",
-      fontWeight: "bold"
+      display:"flex",
+      justifyContent:"space-between",
+      alignItems:"center",
+      padding:"15px 20px",
+      borderBottom:"1px solid #eee",
+      background:"white",
     }}>
-      Swiggy Clone 🍔
+
+       {/*Logo */}
+      <h2 style={{color:"#ff5200"}}>Swiggy</h2> 
+
+
+      {/*Menu*/}
+      <div style={{display:"flex",gap:"20px",cursor:"pointer"}}>
+
+        <span>Home</span>
+        <span>Search</span>
+        <span>Cart</span>
+        <span>Login</span>
+      </div>
     </div>
   );
 }
