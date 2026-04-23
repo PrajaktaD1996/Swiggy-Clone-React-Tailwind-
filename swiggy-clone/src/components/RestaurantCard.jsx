@@ -10,10 +10,15 @@ export default function RestaurantCard({ restaurant }) {
       boxShadow:"0 2px 8px rgba(0,0,0,0.1)",
     }}
 
-      onMouseOut={(e)=>(e.currentTarget.style.transform="scale(1.03)")}
-      onMouseOut={(e)=>(e.currentTarget.style.transform="scale(1)")}
+      onMouseOver={(e) =>
+        (e.currentTarget.style.transform = "scale(1.03)")
+      }
+      onMouseOut={(e) =>
+        (e.currentTarget.style.transform = "scale(1)")
+      }
 >
     <img src={restaurant.image}
+    alt={restaurant.name}
     style={{
       width:"100%",
       height:"140px",
@@ -21,9 +26,26 @@ export default function RestaurantCard({ restaurant }) {
     }}/>
 
    <div style={{padding:"10px"}}>
-    <h3>{restaurant.name}</h3>
-        <p>⭐ {restaurant.rating}</p>
+    <h3 style={{margin :"5px 0px"}}>{restaurant.name}</h3>
+
+    <p style={{ margin: "3px 0", color: "#666" }}>
+          {restaurant.category}
+        </p>
+
+        <p style={{margin:"3px 0"}}>⭐ {restaurant.rating}</p>
         <p>{restaurant.time}</p>
+        <button style={{
+
+          marginTop:"8px",
+          padding:"6px 10px",
+          border:"none",
+          background:"#ff5200",
+          color:"white",
+          borderRadius:"6px",
+          cursor:"pointer",
+        }}>
+          Add
+        </button>
    </div>
     
 

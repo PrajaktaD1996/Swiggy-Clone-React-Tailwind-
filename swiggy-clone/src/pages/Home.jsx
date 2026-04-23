@@ -6,12 +6,20 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [category,setCategory] = useState("All");
 
+  /* const fooditems=[
+    {id:1,name:"pizza",price:200},
+    {id:2,name:"Burger",price:300},
+    {id:3,name:"Pasta",price:180},
+    {id:4,name:"Biryani",price:250},
+
+  ];*/
+
   const chipStyle ={
     padding:"8px 14px",
     borderRadius:"20px",
     border:"1px solid #ddd",
     background:"white",
-    cursor:"ponter",
+    cursor:"pointer",
     fontSize:"14px",
   }
 
@@ -23,8 +31,8 @@ export default function Home() {
   const matchCategory =
     category === "All" || res.category === category;
 
-  const matchTopRated =
-    category !== "TopRated" || res.rating > 4.2;
+ const matchTopRated =
+  category === "TopRated" ? res.rating > 4.2 : true;
 
   return matchSearch && matchCategory && matchTopRated;
 });
