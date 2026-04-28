@@ -4,6 +4,8 @@ export default function Cart({cart,setCart}){
         const newCart = cart.filter((_,i)=> i !== index);
         setCart(newCart);
     };
+
+    const total = cart.reduce((sum,item)=>sum+item.price*item.qty,0);
 return(
 
 
@@ -24,6 +26,7 @@ return(
                     <div>
                         <h4>{item.name}</h4>
                         <p>{item.rating}</p>
+                        <p>₹{item.price} × {item.qty}</p>
 
                    </div>
 

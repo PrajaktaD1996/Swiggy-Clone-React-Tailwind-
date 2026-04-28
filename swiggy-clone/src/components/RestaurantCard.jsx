@@ -27,6 +27,8 @@ export default function RestaurantCard({ restaurant,addToCart }) {
 
    <div style={{padding:"10px"}}>
     <h3 style={{margin :"5px 0px"}}>{restaurant.name}</h3>
+    <p style={{ fontWeight: "bold" }}>₹{restaurant.price}</p>
+    
 
     <p style={{ margin: "3px 0", color: "#666" }}>
           {restaurant.category}
