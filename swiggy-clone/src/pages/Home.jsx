@@ -2,7 +2,7 @@ import { useState } from "react";
 import RestaurantCard from "../components/RestaurantCard";
 import { restaurants } from "../data";
 
-export default function Home() {
+export default function Home({addToCart}) {
   const [search, setSearch] = useState("");
   const [category,setCategory] = useState("All");
 
@@ -62,7 +62,7 @@ export default function Home() {
 
       <div style={{ display: "grid", gap: "15px",gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
         {filtered.map((res) => (
-          <RestaurantCard key={res.id} restaurant={res} />
+          <RestaurantCard key={res.id} restaurant={res} addToCart={addToCart}/>
         ))}
       </div>
     </div>

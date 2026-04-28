@@ -1,4 +1,4 @@
-export default function RestaurantCard({ restaurant }) {
+export default function RestaurantCard({ restaurant,addToCart }) {
   return (
     <div style={{
 
@@ -34,8 +34,10 @@ export default function RestaurantCard({ restaurant }) {
 
         <p style={{margin:"3px 0"}}>⭐ {restaurant.rating}</p>
         <p>{restaurant.time}</p>
-        <button style={{
+        <button onClick= {()=>{addToCart(restaurant);
+        console.log("Button Click");
 
+        }}style={{
           marginTop:"8px",
           padding:"6px 10px",
           border:"none",
