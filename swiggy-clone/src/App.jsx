@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [toast, setToast] = useState("");
 
   // Add to cart logic (with quantity support)
   const addToCart = (item) => {
@@ -22,6 +23,10 @@ function App() {
         return [...prev, { ...item, qty: 1 }];
       }
     });
+    setToast(`${item.name} added to cart`)
+    setTimeout(()=>{
+      setToast("");},1500);
+    
   };
 
   return (
@@ -53,6 +58,24 @@ function App() {
           }
         />
       </Routes>
+
+      {toast && (
+  <div
+    style={{
+      position: "fixed",
+      top: "20px",
+      right: "20px",
+      background: "#333",
+      color: "white",
+      padding: "10px 15px",
+      borderRadius: "8px",
+      boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+      zIndex: 1000,
+    }}
+  >
+    {toast}
+  </div>
+)}
     </div>
   );
 }

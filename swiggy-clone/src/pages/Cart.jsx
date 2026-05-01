@@ -12,7 +12,7 @@ return(
     <div style ={{padding:"20px"}}>
         <h2>Your cart</h2>
           {
-            cart.length===0?(<p>Cart is empty</p>):(cart.map((item,index)=>
+            cart.length===0?(<div><h2>Cart is empty</h2><p>Add some delicious items!</p></div>):(cart.map((item,index)=>
             (<div key={index}
                    style={{
 
@@ -20,6 +20,12 @@ return(
                     justifyContent:"space-between",
                     padding:"10px",
                     marginTop:"10px",
+                    alignItems:"center",
+                    padding:"10px",
+                    marginBottom:"10px",
+                    border:"1px solid #eee",
+                    borderRadius:"10px",
+
 
                    }}>
 
@@ -29,6 +35,8 @@ return(
                         <p>₹{item.price} × {item.qty}</p>
 
                    </div>
+
+                   <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
 
                    <button
                      onClick={()=>removeItem(index)}
@@ -43,6 +51,9 @@ return(
 
                      Remove
                    </button>
+                   <span>{item.qty}</span>
+                   <button onClick={()=>addToCart(item)}>+</button>
+                </div>
                 </div>
               
                 

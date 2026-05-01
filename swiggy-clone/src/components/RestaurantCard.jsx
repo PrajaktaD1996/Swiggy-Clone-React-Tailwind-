@@ -37,7 +37,7 @@ export default function RestaurantCard({ restaurant,addToCart }) {
         <p style={{margin:"3px 0"}}>⭐ {restaurant.rating}</p>
         <p>{restaurant.time}</p>
         <button onClick= {()=>{addToCart(restaurant);
-        console.log("Button Click");
+        
 
         }}style={{
           marginTop:"8px",
@@ -47,7 +47,10 @@ export default function RestaurantCard({ restaurant,addToCart }) {
           color:"white",
           borderRadius:"6px",
           cursor:"pointer",
-        }}>
+        }}
+        onMouseOver={(e)=>(e.currentTarget.style.opacity="0.85")}
+        onMouseOut={(e)=>(e.currentTarget.style.opacity="1")}
+        >
           Add
         </button>
    </div>
