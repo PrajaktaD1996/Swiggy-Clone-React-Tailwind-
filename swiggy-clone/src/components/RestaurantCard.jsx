@@ -47,6 +47,7 @@ export default function RestaurantCard({ restaurant,addToCart }) {
           color:"white",
           borderRadius:"6px",
           cursor:"pointer",
+          transition : "transform 0.2s ease",
         }}
         onMouseOver={(e)=>(e.currentTarget.style.opacity="0.85")}
         onMouseOut={(e)=>(e.currentTarget.style.opacity="1")}

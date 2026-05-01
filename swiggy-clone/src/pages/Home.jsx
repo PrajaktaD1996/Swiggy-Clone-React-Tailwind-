@@ -60,7 +60,7 @@ export default function Home({addToCart}) {
         borderRadius:"6px", }}
       />
 
-      <div style={{ display: "grid", gap: "15px",gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
+      <div style={{ padding: "20px 60px", maxWidth: "1200px", margin: "auto" }}>
         {filtered.map((res) => (
           <RestaurantCard key={res.id} restaurant={res} addToCart={addToCart}/>
         ))}

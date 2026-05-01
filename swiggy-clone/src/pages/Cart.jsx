@@ -9,10 +9,17 @@ export default function Cart({cart,setCart}){
 return(
 
 
-    <div style ={{padding:"20px"}}>
+    <div style ={{
+        
+        marginTop:"20px",
+        padding:"15px",
+        borderTop:"2px solid #eee",
+        fontWeight:"bold",
+
+    }}>
         <h2>Your cart</h2>
           {
-            cart.length===0?(<div><h2>Cart is empty</h2><p>Add some delicious items!</p></div>):(cart.map((item,index)=>
+            cart.length===0?(<div style={{textAlign:"center",marginTop:"50px"}}><h2>🛒Cart is empty</h2><p>Add some delicious items!</p></div>):(cart.map((item,index)=>
             (<div key={index}
                    style={{
 
@@ -40,6 +47,7 @@ return(
 
                    <button
                      onClick={()=>removeItem(index)}
+                     disable={item.qty ===1}
                      style={{
 
                              background:"red",
@@ -49,7 +57,7 @@ return(
                              cursor:"pointer",
                      }}>
 
-                     Remove
+                     -
                    </button>
                    <span>{item.qty}</span>
                    <button onClick={()=>addToCart(item)}>+</button>
