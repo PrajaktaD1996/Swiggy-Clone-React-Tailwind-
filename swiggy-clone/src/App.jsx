@@ -1,12 +1,19 @@
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [cart, setCart] = useState([]);
+  
+  const [cart, setCart] = useState(()=>{
+    const saved= localStorage.getItem("cart");
+    return saved ? JSON.parse(saved):[];
+  });
   const [toast, setToast] = useState("");
+  useEffect(() => {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}, [cart]);
 
   // Add to cart logic (with quantity support)
   const addToCart = (item) => {
