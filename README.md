@@ -27,13 +27,7 @@ This project focuses on building a real-world frontend system using component-ba
 ## Screenshots
 
 ### Home Page
-![Home Page](images/home.png)
-
-### Restaurant Listing Page
-![Restaurant Page](images/restaurants.png)
-
-### Menu Page
-![Menu Page](images/menu.png)
+![Home Page](swiggy-clone/src/assets/AdobeExpressPhotos_46952666dd984e9ca0e4b1bf06793024_CopyEdited.png)
 
 ---
 
