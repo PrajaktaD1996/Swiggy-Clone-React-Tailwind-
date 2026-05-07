@@ -48,12 +48,13 @@ This project focuses on building a real-world frontend system using component-ba
 
 ## Status
 Completed 
-![swiggy-clone-react-tailwind.vercel.app]
+
 
 ---
 
 ## 🔗 Live Demo
-(Add your Vercel/Netlify link here)
+https://vercel.com/prajakta-deokars-projects/swiggy-clone-react-tailwind
+
 
 ---
 
