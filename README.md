@@ -1,4 +1,4 @@
-# Swiggy-Clone-React-Tailwind | In Progress 🚧
+# Swiggy-Clone-React-Tailwind | Completed 
 Responsive food delivery UI built with React + Tailwind, focusing on reusable components and modern layout system 
 
 A responsive food delivery web application inspired by Swiggy, built using React and Tailwind CSS.  
@@ -47,12 +47,12 @@ This project focuses on building a real-world frontend system using component-ba
 ---
 
 ## Status
-In Progress 🚧 (Actively improving and adding new features)
-
+Completed 
 ---
 
 ## 🔗 Live Demo
-(Add your Vercel/Netlify link here)
+[https://vercel.com/prajakta-deokars-projects/swiggy-clone-react-tailwind](https://swiggy-clone-react-tailwind.vercel.app/)
+
 
 ---
 
